@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="Zero:Archive">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  
+  <title>{{ page.title | default: site.title }}</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">ZERO:ARCHIVE</div>
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}">HOME</a></li>
+        <li><a href="{{ '/artists' | relative_url }}">ARTISTS</a></li>
+        <li><a href="{{ '/releases' | relative_url }}">RELEASES</a></li>
+        <li><a href="{{ '/about' | relative_url }}">ABOUT</a></li>
+        <li><a href="{{ '/contact' | relative_url }}">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Main Content -->
+  <main>
+    {{ content }}
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">
+        ZERO:ARCHIVE © {{ 'now' | date: "%Y" }} // COMPLEX SOUND DESIGN COLLECTIVE
+      </p>
+      <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.8rem;">
+        DESIGNED BY IZUMI SONOKA // POWERED BY JEKYLL
+      </p>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  
+</body>
+</html>

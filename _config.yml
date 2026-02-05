@@ -1,0 +1,35 @@
+# Zero:Archive Label Website Configuration
+title: "Zero:Archive"
+description: "Complex Sound Design Collective"
+url: "https://zeroarchive.org"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Collections
+collections:
+  artists:
+    output: true
+    permalink: /artists/:name/
+  releases:
+    output: true
+    permalink: /releases/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "artists"
+    values:
+      layout: "artist"
+  - scope:
+      path: ""
+      type: "releases"
+    values:
+      layout: "release"
